@@ -17,7 +17,7 @@ public class ImpulsoEsfera : MonoBehaviour
 	{
 		if (Input.GetButtonDown ("Fire1")) {
 			Activar.SetActive (true);
-			rocketPrefab.AddForce (transform.forward * 5000);
+			rocketPrefab.AddForce (transform.forward * 3000);
 
 		} else 
 		{

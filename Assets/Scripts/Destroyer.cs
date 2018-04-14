@@ -18,8 +18,8 @@ public class Destroyer : MonoBehaviour {
 			Instantiate(explosion, transform.position,transform.rotation);
 			contador = contador + 10;
 		puntuacion.text = "Puntuacion: " + contador;
-
-			{
+        GetComponent<AudioSource>().Play();
+        {
 			Destroy(other.gameObject);
 
 		}

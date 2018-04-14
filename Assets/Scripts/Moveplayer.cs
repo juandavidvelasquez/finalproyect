@@ -20,10 +20,10 @@ public class Moveplayer: MonoBehaviour
             speed = Input.GetAxis("Vertical") * speed * 2;
             print("Se Presiono Espacio ");
             elPique = true;
-            if (elPique = false)
+            if (elPique == false) 
 
             {
-
+                speed = 1.0f;
             }
             
 
