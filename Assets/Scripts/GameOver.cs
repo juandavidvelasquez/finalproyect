@@ -1,22 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour {
 
+public GameObject sfera;
 
 
-
-void Start(){
-
-}
 
 	void OnTriggerEnter(Collider other)
 	{
 		
-		if(other.tag == "Out");
-		print("Out Of Range");
-	
+		if(other.GetComponent<Collider>().tag == "Out")
+		{
+			SceneManager.LoadScene (02);
+		
+}
 }
 }
 

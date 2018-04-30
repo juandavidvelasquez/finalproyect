@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//este script sirve para darle fuerza y movimiento a la esfera para que pueda colisionar por medio del click izquierdo
 public class ImpulsoEsfera : MonoBehaviour 
 {
 
-	public Rigidbody rocketPrefab;
+	public Rigidbody rocketPrefab;// se usa un rigidbody para darle fuerza al objeto
 	public GameObject Activar;
 
 	public void Start()

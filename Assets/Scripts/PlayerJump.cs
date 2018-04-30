@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// sirve para hacer que el jugador pueda saltar por medio de gravedad y un transform al presionar click derecho
 public class PlayerJump : MonoBehaviour {
 
 	public float  Speed = 10f ;
@@ -21,7 +23,7 @@ public class PlayerJump : MonoBehaviour {
 
 			moveDi *= Speed;
 
-			if (Input.GetButton("Fire2")) {
+			if (Input.GetButton("Jump")) {
 				moveDi.y = Jumpforce;
 			}
 		}

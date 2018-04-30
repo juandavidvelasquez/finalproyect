@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+// movimiento de traslacion jugador principal y velocidad 
 public class Moveplayer: MonoBehaviour 
 {
 	public float speed = 10.0F;
