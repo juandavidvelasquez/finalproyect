@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // se usa para destruir objetivos y npc por medio de colisiones y agregador puntos al marcador luego de ser destruidos 
 
@@ -21,13 +22,17 @@ public class Destroyer : MonoBehaviour {
 			contador = contador + 10;// se  crea un contador y se establece la suma de puntos 
 		puntuacion.text = "Puntuacion: " + contador;
         GetComponent<AudioSource>().Play();
-        {
-			Destroy(other.gameObject);// de destruye el objeto al colisionar 
+        {	
+			// se destruye el objeto al colisionar 
+			
+			Destroy(other.gameObject);
 
+		
 		}
 	}
 
-	void Awake()
+	
+		void Awake()
 	{
 		contador = 0;
 		print (contador);
@@ -35,3 +40,4 @@ public class Destroyer : MonoBehaviour {
 	}
 
 }
+	

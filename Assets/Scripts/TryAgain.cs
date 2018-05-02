@@ -1,16 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TryAgain : MonoBehaviour {
-
-	// Use this for initialization
+public  GameObject texto;
+	
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+	void Update () 
+		{
+			Instantiate(texto,transform.position,transform.rotation);
+		}
+
+		void Cambio()
+		{
+			if(Input.GetButton("Enter"))
+			{
+				SceneManager.LoadScene(01);
+
+			}
+		}
 }
+			
+			
+
+			
+
+		
+
+	
+
+	
