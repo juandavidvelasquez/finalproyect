@@ -25,18 +25,18 @@ public GameObject selected; //esta variable guarda el gameobject seleccionado
 	GameObject Raycast ()//Retorna un raycast, si no se hace click en un object retornara null
 	{
 		RaycastHit vHit = new RaycastHit();
-         Ray vRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+         Ray vRay = Camera.main.ScreenPointToRay(Input.mousePosition);// se crea un rayo en la camara y se mueve en la posicion que apunte el mouse 
          if(Physics.Raycast(vRay, out vHit, 1000)) 
          {
              return vHit.transform.gameObject;
          }
 		 return null;
 	}
-	Vector3 Mpos () //Retorna la posicion del mouse
+	Vector3 Mpos () //Retorna la posicion del mouse 
 	{
-		 Vector3 v3 = Input.mousePosition;
-			v3.z = 10.0f;
-			v3 = Camera.main.ScreenToWorldPoint(v3);
+		 Vector3 v3 = Input.mousePosition; //  vector3  es estructura se usa para pasar posiciones 3D y direcciones alrededor tales como x,y,z, en este caso se usa como constructor 
+			v3.z = 10.0f;// se le da un valor a la posicion en z del vector3
+			v3 = Camera.main.ScreenToWorldPoint(v3);//el vector3 es igual a la camara principal por la pantalla  al punto global que  transforma posicion del espacio de la pantalla al espacio global o mundial de la pantalla 
          return v3;
 	}
 }

@@ -20,14 +20,14 @@ public class CamaraRotation : MonoBehaviour {
 
     }
 
-    // Update is called once per frame
+    // por lo general los input se ejecutan en update por que se van a presionar teclas constamente durante el juego 
     void Update()
     {
 // con input y asignando los axis  se de la el movimiento con el mouse a camara
         rota += speedH * Input.GetAxis("Mouse X");
        inclina -= speedV * Input.GetAxis("Mouse Y");
 
-        transform.eulerAngles = new Vector3(inclina, rota, 0.0f);// se usa para dar una representacion por medio de un vector3 a X,Y,Z y euler a su rotcion
+        transform.eulerAngles = new Vector3(inclina, rota, 0.0f);// se usa para dar una representacion por medio de un vector3 a X,Y,Z y euler a su rotacion
 
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// se usa para hacer que el enemigo se mueva de forma aleatoria hasta encontrar un objeto por medio de un ray
+// se usa para hacer que el enemigo se mueva de forma aleatoria hasta encontrar un objeto por medio de un rayo no visible
 
 public class RayIA : MonoBehaviour
 {
@@ -22,9 +22,9 @@ public class RayIA : MonoBehaviour
 		RaycastHit impacto;
 		if(Physics.SphereCast(ray ,0.75f,out impacto));
 		{
-			if(impacto.distance < rango)
+			if(impacto.distance < rango)// se crea una condicion 
 			{
-				float angulo = Random.Range(-110,110);
+				float angulo = Random.Range(-110,110);//se establece un rango aleatorio entre menos 110 y 110
 				transform.Rotate(0,angulo,0);
 			}
 		}

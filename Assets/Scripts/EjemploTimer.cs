@@ -12,18 +12,19 @@ public class EjemploTimer : MonoBehaviour
     [SerializeField]
     private float tiempo = 50;
     
-    void Update()
+    void Update()// se ejecuta en un update porque es una funcion referente al tiempo y va a moverse durante los fotogramas constantemente 
     {
         if (tiempo > 0)
         {
-            tiempo = tiempo- Time.deltaTime ;
-			cuentaTiempo.text = "Tiempo " + tiempo;
+            tiempo = tiempo- Time.deltaTime ;// deltatime es una variable estatica que se encarga de modificar el tiempo hace que la velocidad de cuadro de su juego sea independiente 
+			cuentaTiempo.text = "Tiempo " + tiempo;// si tiempo es mayor que 0, tiempo es igual a tiempo por la variable estatica de unidad de deltatime 
+
         }
             else
             {
-                if(tiempo <= 0)
+                if(tiempo <= 0)// creamos un estado o condicion if para el tiempo
                 {
-                    SceneManager.LoadScene(02);
+                    SceneManager.LoadScene(02);//  carga o cambia la escena del juego y simula una finalizacion si el tiempo es igual a 0
                 }
             }
             

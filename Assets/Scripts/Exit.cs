@@ -9,9 +9,11 @@ public class Exit : MonoBehaviour {
 void OnMouseDown()
 
 {
-	if(Input.GetMouseButtonDown(0))
+	if(Input.GetMouseButtonDown(0))//  en input al clickear el texto del menu de juego que dice salir
 	{
-		Application.Quit();
+		Application.Quit();// se sale de la aplicación del jugador,Apaga la aplicación en ejecución. Salir es ignorado en el editor.
+
+
 		Debug.Log("Has Salido del juego");
 	}
 }
