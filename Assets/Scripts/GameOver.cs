@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-// esta script simula una finalizacion del juego si la el objeto esfera sale del rango de juego 
+// este script simula una finalizacion del juego si la el objeto esfera sale del rango de juego 
 public class GameOver : MonoBehaviour {
 
 public GameObject sfera;// se crea una variable publica para asignar el objeto 
